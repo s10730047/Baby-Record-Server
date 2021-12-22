@@ -1,0 +1,168 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>BabyRecords_Server</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="models\" />
+    <None Remove="core\" />
+    <None Remove="core\users\" />
+    <None Remove="core\users\Controllers\" />
+    <None Remove="core\users\models\" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer.Design" />
+    <None Remove="Entities\" />
+    <None Remove="Migrations\" />
+    <None Remove="JWT" />
+    <None Remove="core\tools\" />
+    <None Remove="Microsoft.AspNetCore.Authentication" />
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <None Remove="core\users\Services\" />
+    <None Remove="features\" />
+    <None Remove="features\Baby-info\" />
+    <None Remove="features\Baby-info\Controllers\" />
+    <None Remove="features\Baby-info\Dto\" />
+    <None Remove="features\Baby-info\Services\" />
+    <None Remove="upload\" />
+    <None Remove="features\Baby-Record-Bathe\" />
+    <None Remove="features\Baby-Record-Bathe\Controllers\" />
+    <None Remove="features\Baby-Record-Bathe\Dto\" />
+    <None Remove="features\Baby-Record-Bathe\Services\" />
+    <None Remove="features\Baby-Record-Diaper\" />
+    <None Remove="features\Baby-Record-Diaper\Controllers\" />
+    <None Remove="features\Baby-Record-Diaper\Dto\" />
+    <None Remove="features\Baby-Record-Diaper\Services\" />
+    <None Remove="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+    <None Remove="Microsoft.IdentityModel.Logging" />
+    <None Remove="Microsoft.IdentityModel.Tokens" />
+    <None Remove="System.IdentityModel.Tokens.Jwt" />
+    <None Remove="features\Baby-Record-Health\" />
+    <None Remove="features\Baby-Record-Feeding\" />
+    <None Remove="features\Baby-Record-Growing\" />
+    <None Remove="features\Baby-Record-Milking\" />
+    <None Remove="features\Baby-Record-Sleep\" />
+    <None Remove="features\Baby-Record-Temp\" />
+    <None Remove="features\Family-Group\" />
+    <None Remove="features\Baby-Record-Feeding\Controllers\" />
+    <None Remove="features\Baby-Record-Feeding\Dto\" />
+    <None Remove="features\Baby-Record-Feeding\Services\" />
+    <None Remove="features\Baby-Record-Growing\Controllers\" />
+    <None Remove="features\Baby-Record-Growing\Dto\" />
+    <None Remove="features\Baby-Record-Growing\Services\" />
+    <None Remove="features\Baby-Record-Health\Controllers\" />
+    <None Remove="features\Baby-Record-Health\Dto\" />
+    <None Remove="features\Baby-Record-Health\Services\" />
+    <None Remove="features\Baby-Record-Milking\Controllers\" />
+    <None Remove="features\Baby-Record-Milking\Dto\" />
+    <None Remove="features\Baby-Record-Milking\Services\" />
+    <None Remove="features\Baby-Record-Sleep\Controllers\" />
+    <None Remove="features\Baby-Record-Sleep\Dto\" />
+    <None Remove="features\Baby-Record-Sleep\Services\" />
+    <None Remove="features\Baby-Record-Temp\Controllers\" />
+    <None Remove="features\Baby-Record-Temp\Dto\" />
+    <None Remove="features\Baby-Record-Temp\Services\" />
+    <None Remove="features\Family-Group\Controllers\" />
+    <None Remove="features\Family-Group\Dto\" />
+    <None Remove="features\Family-Group\Services\" />
+    <None Remove="features\temp-and-humidity\" />
+    <None Remove="features\Baby-FaceCover\" />
+    <None Remove="features\Baby-Area\" />
+    <None Remove="features\temp-and-humidity\Controllers\" />
+    <None Remove="features\temp-and-humidity\Dto\" />
+    <None Remove="features\temp-and-humidity\Services\" />
+    <None Remove="features\Baby-Area\Controllers\" />
+    <None Remove="features\Baby-Area\Dto\" />
+    <None Remove="features\Baby-Area\Services\" />
+    <None Remove="features\Baby-FaceCover\Controllers\" />
+    <None Remove="features\Baby-FaceCover\Dto\" />
+    <None Remove="features\Baby-FaceCover\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="core\" />
+    <Folder Include="core\users\" />
+    <Folder Include="core\users\Controllers\" />
+    <Folder Include="core\users\Dto\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="core\tools\" />
+    <Folder Include="core\users\Services\" />
+    <Folder Include="features\" />
+    <Folder Include="features\Baby-info\" />
+    <Folder Include="features\Baby-info\Controllers\" />
+    <Folder Include="features\Baby-info\Dto\" />
+    <Folder Include="features\Baby-info\Services\" />
+    <Folder Include="upload\" />
+    <Folder Include="features\Baby-Record-Bathe\" />
+    <Folder Include="features\Baby-Record-Bathe\Controllers\" />
+    <Folder Include="features\Baby-Record-Bathe\Dto\" />
+    <Folder Include="features\Baby-Record-Bathe\Services\" />
+    <Folder Include="features\Baby-Record-Diaper\" />
+    <Folder Include="features\Baby-Record-Diaper\Controllers\" />
+    <Folder Include="features\Baby-Record-Diaper\Dto\" />
+    <Folder Include="features\Baby-Record-Diaper\Services\" />
+    <Folder Include="features\Baby-Record-Health\" />
+    <Folder Include="features\Baby-Record-Feeding\" />
+    <Folder Include="features\Baby-Record-Growing\" />
+    <Folder Include="features\Baby-Record-Milking\" />
+    <Folder Include="features\Baby-Record-Sleep\" />
+    <Folder Include="features\Baby-Record-Temp\" />
+    <Folder Include="features\Family-Group\" />
+    <Folder Include="features\Baby-Record-Feeding\Controllers\" />
+    <Folder Include="features\Baby-Record-Feeding\Dto\" />
+    <Folder Include="features\Baby-Record-Feeding\Services\" />
+    <Folder Include="features\Baby-Record-Growing\Controllers\" />
+    <Folder Include="features\Baby-Record-Growing\Dto\" />
+    <Folder Include="features\Baby-Record-Growing\Services\" />
+    <Folder Include="features\Baby-Record-Health\Controllers\" />
+    <Folder Include="features\Baby-Record-Health\Dto\" />
+    <Folder Include="features\Baby-Record-Health\Services\" />
+    <Folder Include="features\Baby-Record-Milking\Controllers\" />
+    <Folder Include="features\Baby-Record-Milking\Dto\" />
+    <Folder Include="features\Baby-Record-Milking\Services\" />
+    <Folder Include="features\Baby-Record-Sleep\Controllers\" />
+    <Folder Include="features\Baby-Record-Sleep\Dto\" />
+    <Folder Include="features\Baby-Record-Sleep\Services\" />
+    <Folder Include="features\Baby-Record-Temp\Controllers\" />
+    <Folder Include="features\Baby-Record-Temp\Dto\" />
+    <Folder Include="features\Baby-Record-Temp\Services\" />
+    <Folder Include="features\Family-Group\Controllers\" />
+    <Folder Include="features\Family-Group\Dto\" />
+    <Folder Include="features\Family-Group\Services\" />
+    <Folder Include="features\temp-and-humidity\" />
+    <Folder Include="features\Baby-FaceCover\" />
+    <Folder Include="features\Baby-Area\" />
+    <Folder Include="features\temp-and-humidity\Controllers\" />
+    <Folder Include="features\temp-and-humidity\Dto\" />
+    <Folder Include="features\temp-and-humidity\Services\" />
+    <Folder Include="features\Baby-Area\Controllers\" />
+    <Folder Include="features\Baby-Area\Dto\" />
+    <Folder Include="features\Baby-Area\Services\" />
+    <Folder Include="features\Baby-FaceCover\Controllers\" />
+    <Folder Include="features\Baby-FaceCover\Dto\" />
+    <Folder Include="features\Baby-FaceCover\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="JWT" Version="8.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.11" />
+    <PackageReference Include="Microsoft.IdentityModel.Logging" Version="6.13.1" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.13.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.13.1" />
+  </ItemGroup>
+</Project>
